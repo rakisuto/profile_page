@@ -1,0 +1,91 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/profile.css" type="text/css">
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/animate.css" type="text/css">
+<link rel="stylesheet" href="css/rotate.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.20/ua-parser.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/jquery.textillate.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<script src="js/rotation.js"></script>
+</head>
+<body>
+<header class="site-header">
+    <span class="site-logo" data-in-effect="rollIn" data-out-shuffle="true">じこしょうかいさいと</span>
+    <nav class="gnav">
+        <ul class="gnav__menu">
+            <li class="gnav__menu__item"><a href="#home">HOME</a></li>
+            <li class="gnav__menu__item"><a href="#profile">Profile</a></li>
+            <li class="gnav__menu__item"><a href="#link">Link</a></li>
+            <li class="gnav__menu__item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content">
+    <h1><a id="home" class="contents_inner">HOME</a></h1>
+    <p>🐹マウスオーバー(スマホの場合はタッチ)すると反転します...ただそれだけ🐹</p>
+        <div class="flip js-flip">
+            <div class="flip-inner js-flip-inner">
+                <div class="front">
+                    <img class="thumbnail" src="img/moru_full.png" alt="まんぷく">
+                </div>
+                <div class="back">
+                    <img class="thumbnail thumbnail-hover" src="img/moru_hanger.png" alt="はらぺこ">
+                </div>
+            </div>
+        </div>
+    <h1><a id="profile" class="contents_inner">Profile</a></h1>
+        <section id="profile_inline_block">
+            <div class="profile_child">
+                <b class="subheading">name</b>
+                <img src="img/pet_maigofuda_cat.png" width="200px" height="200px">
+                <p>enix</p>
+            </div>
+            <div class="profile_child">
+                <b class="subheading">age</b>
+                <img src="img/monitor_tenin_nenrei_kakunin.png" width="200px" height="200px">
+                <p>25</p>
+            </div>
+            <div class="profile_child">
+                <b class="subheading">work</b>
+                <img src="img/shigoto_zaitaku_cat_man.png" width="200px" height="200px">
+                <p>engineer</p>
+            </div>
+            <div class="profile_child">
+                <b class="subheading">hobby</b>
+                <img src="img/game_jikkyou_man.png" width="200px" height="200px">
+                <p>pokemon</p>
+                <p>anime</p>
+                <p>reading</p>
+                <p>sports</p>
+            </div>
+        </section>
+    <h1><a id="link" class="contents_inner">Link</a></h1>
+        <div class="hatena_link">
+            <a href="https://youki-asbuppa.hatenablog.com/" target="_blank" rel="noopener">はてなブログ</a>
+        </div>
+    <h1><a id="contact" class="contents_inner">Contact</a></h1>
+        <p><a href="mailto:rinshankaiho1208@gmail.com">💌メールアドレス💌</a></p>
+</div>
+
+<!--facebookのシェアボタン-->
+
+<div id="fb-root">
+</div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v9.0" nonce="qzWNxKfg">
+</script>
+<div class="fb-like" data-href="https://yellowlion5.sakura.ne.jp/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true">
+</div>
+
+<!--twitterのshareボタン-->
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</body>
+
+<script>
+    $(function () {
+        $('.site-logo').textillate();
+    })
+</script>
