@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="css/reset.css" type="text/css">
 <link rel="stylesheet" href="css/animate.css" type="text/css">
 <link rel="stylesheet" href="css/rotate.css" type="text/css">
+<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.20/ua-parser.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/jquery.textillate.js"></script>
@@ -15,10 +18,18 @@
     <span class="site-logo" data-in-effect="rollIn" data-out-shuffle="true">じこしょうかいさいと</span>
     <nav class="gnav">
         <ul class="gnav__menu">
-            <li class="gnav__menu__item"><a href="#home">HOME</a></li>
-            <li class="gnav__menu__item"><a href="#profile">Profile</a></li>
-            <li class="gnav__menu__item"><a href="#link">Link</a></li>
-            <li class="gnav__menu__item"><a href="#contact">Contact</a></li>
+            <li class="gnav__menu__item">
+                <button type="button" class="nes-btn is-primary"><a href="#home">
+                    HOME</a></button></li>
+            <li class="gnav__menu__item">
+                <button type="button" class="nes-btn is-primary"><a href="#profile">
+                    Profile</a></button></li>
+            <li class="gnav__menu__item">
+                <button type="button" class="nes-btn is-primary"><a href="#link">
+                    Link</a></button></li>
+            <li class="gnav__menu__item">
+                <button type="button" class="nes-btn is-primary"><a href="#contact">
+                    Contact</a></button></li>
         </ul>
     </nav>
 </header>
@@ -88,4 +99,8 @@
     $(function () {
         $('.site-logo').textillate();
     })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  new Darkmode().showWidget();
 </script>
