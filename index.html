@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="css/reset.css" type="text/css">
 <link rel="stylesheet" href="css/animate.css" type="text/css">
 <link rel="stylesheet" href="css/rotate.css" type="text/css">
+<link rel="stylesheet" href="css/load.css" type="text/css">
 <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -14,29 +15,63 @@
 <script src="js/rotation.js"></script>
 </head>
 <body>
+<div class="loader-wrap">
+    <div class="loader">Loading...</div>
+</div>
+<!--
+<div id="loader-bg">
+    <div id="loader">
+        <section class="nes-container">
+            <progress class="nes-progress is-pattern" id="progress" value="0" max="90"></progress>
+            <script>
+                //id=progressのvalue値を、1秒ごとに10加算させる。100になったら、0に戻す。
+                num = document.getElementById("progress").value
+                //console.log(num)
+                add_value = function() {
+                        num += 10
+                        document.getElementById("progress").value = num
+                        if (num == 90) {
+                            num = 0
+                        }
+                        //console.log(num)
+                    }
+                setInterval(add_value,1000);
+            </script>
+        </section>
+    </div>
+</div>
+-->
 <header class="site-header">
-    <span class="site-logo" data-in-effect="rollIn" data-out-shuffle="true">じこしょうかいさいと</span>
+    <span class="site-logo" data-in-effect="rollIn" data-out-shuffle="true">READ ME</span>
+
     <nav class="gnav">
         <ul class="gnav__menu">
             <li class="gnav__menu__item">
-                <button type="button" class="nes-btn is-primary"><a href="#home">
+                <button type="button"><a href="#home">
                     HOME</a></button></li>
             <li class="gnav__menu__item">
-                <button type="button" class="nes-btn is-primary"><a href="#profile">
+                <button type="button"><a href="#profile">
                     Profile</a></button></li>
+<!--skillもいれる
             <li class="gnav__menu__item">
-                <button type="button" class="nes-btn is-primary"><a href="#link">
+                <button type="button"><a href="#skill">
+                    Skill</a></button></li>
+-->
+            <li class="gnav__menu__item">
+                <button type="button"><a href="#link">
                     Link</a></button></li>
             <li class="gnav__menu__item">
-                <button type="button" class="nes-btn is-primary"><a href="#contact">
+                <button type="button"><a href="#contact">
                     Contact</a></button></li>
         </ul>
     </nav>
 </header>
-
 <div class="content">
     <h1><a id="home" class="contents_inner">HOME</a></h1>
-    <p>🐹マウスオーバー(スマホの場合はタッチ)すると反転します...ただそれだけ🐹</p>
+    <!--🐹マウスオーバー(スマホの場合はタッチ)すると反転します...ただそれだけ🐹</p>-->
+    <div class="nes-balloon from-right">
+        <p>Hello</p>
+      </div>
         <div class="flip js-flip">
             <div class="flip-inner js-flip-inner">
                 <div class="front">
@@ -74,27 +109,56 @@
             </div>
         </section>
     <h1><a id="link" class="contents_inner">Link</a></h1>
-        <div class="hatena_link">
-            <a href="https://youki-asbuppa.hatenablog.com/" target="_blank" rel="noopener">はてなブログ</a>
+        <section id="profile_inline_block">
+        <div class="link_child">
+            <a href="https://youki-asbuppa.hatenablog.com/" target="_blank" rel="noopener">
+            <b class="subheading-link">hatenablog</b></a>
+            <img src="img/mark_question.png" width="200px" height="200px">
+            </a>
         </div>
+        <div class="link_child">
+            <a href="https://qiita.com/Square_y" target="_blank" rel="noopener">
+            <b class="subheading-link">qiita</b></a>
+            <img src="img/1_hokkaidou.png" width="200px" height="200px">
+            </a>
+        </div>
+        </section>
     <h1><a id="contact" class="contents_inner">Contact</a></h1>
-        <p><a href="mailto:rinshankaiho1208@gmail.com">💌メールアドレス💌</a></p>
-</div>
+        <section id="profile_inline_block">
+        <div class="contact_child">
+            <p><a href="mailto:rinshankaiho1208@gmail.com">💌mail-address💌</a></p>
+        </div>
+        </section>
 
-<!--facebookのシェアボタン-->
-
-<div id="fb-root">
-</div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v9.0" nonce="qzWNxKfg">
-</script>
-<div class="fb-like" data-href="https://yellowlion5.sakura.ne.jp/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true">
-</div>
-
-<!--twitterのshareボタン-->
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+    <h2><a id="share" class="contents_inner">Share</a></h1>
+    <div class="link_sns">
+    <!--twitterのshareボタン-->
+        <section id="twitter">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><i class="nes-icon twitter is-medium"></a></i>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        </section>
+    </div>
+    <footer>
+        <p>© All rights reserved by 
+    </footer>
 </body>
 
+<script>
+$(function(){
+	var loader = $('.loader-wrap');
+
+	//ページの読み込みが完了したらアニメーションを非表示
+	$(window).on('load',function(){
+		loader.fadeOut();
+	});
+
+	//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+	setTimeout(function(){
+		loader.fadeOut();
+	},3000);
+});
+</script>
 <script>
     $(function () {
         $('.site-logo').textillate();

@@ -65,9 +65,10 @@ body {
     margin-left: 1cm;
 }
 .contents_inner {
+    user-select: none;
     padding-top: 200px;
     margin-top: -200px;
-    line-height: 5cm;
+    line-height: 2cm;
 }
 .profile_child {
     display: inline-block;
@@ -88,10 +89,25 @@ body {
     color: red;
     font-size: 150%;
     background: linear-gradient(transparent 60%, #ffff66 60%);
-
 }
-.hatena_link {
-    position: relative;
+.subheading-link{
+    color:brown;
+    font-size: 120%;
+    background: linear-gradient(transparent 60%, #ffff66 60%);
+}
+.link_child {
+    display: inline-block;
+    border:double 5px gray;
+    border-radius:15px;
+    max-width:250px;
+    margin:40px 10px;
+    padding:10px;
+    vertical-align: top;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+}
+.link_sns {
+    text-align: center;
 }
 
 .site-footer{

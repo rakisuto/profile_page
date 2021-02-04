@@ -1,9 +1,9 @@
 .flip {
     position: relative;
-    left: 50%;
+    left: 20%;
     transform: translateX(-50%);
     width: 300px;
-    height: 300px;
+    height: 350px;
   }
   .flip:hover .flip-inner {
     transform: rotateY(180deg);
